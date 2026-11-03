@@ -13,6 +13,8 @@ reasoning effort, changes how a failed review is reported, and can reject
 automatically instead of waiting for manual confirmation. It also fixes
 problems that can occur in native Auto review.
 
+![Setting Panel](docs/img/en.png)
+
 ## Features
 
 The plugin adds a new review settings panel once DSH's Auto review permission
