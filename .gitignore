@@ -1,0 +1,56 @@
+# Dependencies and package-manager state
+node_modules/
+.pnpm-store/
+.pnpm-debug.log*
+
+# Logs and diagnostics
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package-manager state (the project intentionally has no lockfile)
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Test and coverage output
+coverage/
+.nyc_output/
+*.lcov
+
+# Packed artifacts
+*.tgz
+dsh-better-approve-*.tgz
+
+# Local DSH state when a profile points at this checkout
+.dsh/
+.dsh-*/
+storages/
+
+# Editors and IDEs
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+*.iml
+*.suo
+*.swp
+*.swo
+*~
+
+# Operating-system metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Patch leftovers
+*.orig
+*.rej

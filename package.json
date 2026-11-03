@@ -1,0 +1,82 @@
+{
+  "name": "dsh-better-approve",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness plugin: an enhanced Auto review (Approve for me) gate with a selectable reviewer model and reasoning effort, a configurable denied-call policy, session-bound settings, reusable presets, and a native-style configuration surface.",
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "auto-review",
+    "approve-for-me",
+    "permissions",
+    "approval",
+    "security"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Yutong Zou",
+    "url": "https://github.com/AngelosZou"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelosZou/dsh-better-approve.git"
+  },
+  "homepage": "https://github.com/AngelosZou/dsh-better-approve#readme",
+  "bugs": {
+    "url": "https://github.com/AngelosZou/dsh-better-approve/issues"
+  },
+  "type": "module",
+  "icon": "./icon.svg",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": {
+      "default": "./lib/client.js"
+    },
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "locale",
+    "icon.svg",
+    "cordis.patch.yml",
+    "docs",
+    "README.md",
+    "README.zh.md",
+    "CONTRIBUTING.md",
+    "THIRD_PARTY_NOTICES.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-gateway",
+        "@deepseek-ai/dsh-api-remotes",
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "scripts": {
+    "test": "node test/manifest.test.mjs && node test/settings.test.mjs && node test/review.test.mjs && node test/client-smoke.mjs",
+    "test:manifest": "node test/manifest.test.mjs",
+    "test:settings": "node test/settings.test.mjs",
+    "test:review": "node test/review.test.mjs",
+    "test:client": "node test/client-smoke.mjs",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm test"
+  }
+}

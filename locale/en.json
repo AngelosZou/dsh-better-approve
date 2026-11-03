@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Enhanced Auto Review",
+    "description": "Extends Auto review with a selectable reviewer model and reasoning effort, a configurable policy for denied calls, settings bound to each Session, and reusable presets."
+  }
+}

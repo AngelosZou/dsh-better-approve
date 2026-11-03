@@ -1,0 +1,15 @@
+# dsh-better-approve bundle patch.
+#
+# This bundle replaces the shipped experimental auto-review integration with its
+# enhanced implementation: the reviewer route, the denied-call policy, and the
+# session-bound configuration are owned here instead. The replacement keeps the
+# reserved `auto` permission preset, so the Web permission picker keeps working.
+#
+# Applied as a profile patch layer after every in-box bundle. The disable of the
+# shipped row is id-targeted and only wins because this layer comes later.
+- id: auto-review
+  disabled: true
+- insert:
+    - id: better-approve
+      name: 'dsh-better-approve'
+      config: {}

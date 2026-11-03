@@ -1,0 +1,21 @@
+* text=auto eol=lf
+
+# Source and configuration are always LF so the same diff applies on every host.
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.svg text eol=lf
+LICENSE text eol=lf
+.gitignore text eol=lf
+
+# Binary assets are never line-ending converted.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.zip binary
+*.tgz binary
